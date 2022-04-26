@@ -3,16 +3,16 @@ window.addEventListener('load', function(){
   const time = document.querySelector("#time");
   const min = document.querySelector("#min");
   const sec = document.querySelector("#sec");
-  let count = 0;
-  const s = 1000;
+  const count = 1000;
+  let DownTime = 0;
 
   start.onclick = function(){
     const set_id =setInterval(function(){
-      count++;
-      min.innerHTML=count;
-      if(count==time.value){
+      min.innerHTML= time.value - DownTime;
+      DownTime++;
+      if(time.value - DownTime < 0 ){
         clearInterval(set_id);
       }
-    },s);
+    },count);
   }
-})
+});
