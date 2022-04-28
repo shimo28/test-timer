@@ -20,13 +20,12 @@ window.addEventListener('load', function(){
           start.disabled = false;
           min = Math.floor(timer / 60);
           sec = timer % 60;
-          time.innerHTML = ("0"+min) +":" + ("0"+sec).slice(-2);
         }else{
           timer--;
           min = Math.floor(timer / 60);
           sec = timer % 60;
-          time.innerHTML = ("0"+min) +":" + ("0"+sec).slice(-2);
         }
+        time.innerHTML = ("0"+min) +":" + ("0"+sec).slice(-2);
       },count);
     
   }
